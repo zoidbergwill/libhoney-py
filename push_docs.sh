@@ -15,7 +15,7 @@ git add docs/
 git mv docs/libhoney/*.html ./
 git add .gitignore
 git clean -fd
-git commit "Travis build: $TRAVIS_BUILD_NUMBER"
+git commit -m "Travis build: $TRAVIS_BUILD_NUMBER"
 git push origin gh-pages
 
 #git remote add origin-pages https://${GH_TOKEN}@github.com/honeycombio/libhoney-py.git > /dev/null 2>&1
