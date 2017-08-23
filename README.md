@@ -32,6 +32,24 @@ libhoney.send_now({
 
 You can find a more complete example demonstrating usage in [`example.py`](example.py)
 
+## Django support
+
+Add the middleware to your list of `MIDDLEWARE_CLASSES` in `settings.py`:
+
+```
+MIDDLEWARE_CLASSES = (
+    # ...
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'libhoney.contrib.django.middleware.HoneyMiddleware',
+)
+```
+
+And make sure you set these two environment variables:
+
+`HONEY_WRITE_KEY`
+`HONEY_DATASET`
+
+
 ## Contributions
 
 Features, bug fixes and other changes to libhoney are gladly accepted. Please
