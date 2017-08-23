@@ -1,5 +1,5 @@
 import sys
-from setuptools import setup
+from setuptools import find_packages, setup
 sys.path.append('libhoney/')
 from version import VERSION
 
@@ -11,7 +11,7 @@ setup(name='libhoney',
       author='Honeycomb.io',
       author_email='feedback@honeycomb.io',
       license='Apache',
-      packages=['libhoney'],
+      packages=find_packages(),
       install_requires=[
           'requests',
           'statsd',
